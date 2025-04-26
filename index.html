@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Page</title>
+    <script>
+        function convertList() {
+            const ul = document.querySelector('ul');
+            if (!ul) return; 
+            const ol = document.createElement('ol');
+            while (ul.firstChild) {
+                ol.appendChild(ul.firstChild);
+            }
+            ul.parentNode.replaceChild(ol, ul);
+        }
+    </script>
+    <style>
+        #imm {
+            width: 50%;
+            height: auto; 
+            display: block;
+            margin-top: 20px;
+        }
+        body{
+            background-color: aqua;
+        }
+         p,ul,ol{
+             font-size: 50px;
+
+        }
+        #cc{
+            color:red;
+            cursor: pointer;
+            font-size:larger;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My First Web Page!</h1>
+
+    <p>Hello! My name is Alex. I'm passionate about coding, video games, and traveling the world. 
+    I'm currently learning web development and excited to build cool projects!</p>
+
+    <p>In my free time, I enjoy trying new recipes, exploring nature, and binge-watching sci-fi series. 
+    I believe learning something new every day keeps life exciting.</p>
+
+    <ul>
+        <li>I can solve a Rubik's cube in under a minute.</li>
+        <li>I've visited 10 different countries.</li>
+        <li>I'm learning to play the guitar.</li>
+    </ul>
+
+    <button onclick="convertList()" id="cc"> Ordered List</button>
+    <br><br>
+    <br><br>
+    <a href="bio.html" id="cc" title="Click to learn more about me!">Go to My Bio Page</a>
+    
+
+    <img src="image1.jpg" alt="Placeholder Image" id="imm">
+
+</body>
+</html>
